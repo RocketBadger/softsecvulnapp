@@ -22,7 +22,7 @@ const fireapp = initializeApp(firebaseConfig);
 const analytics = getAnalytics(fireapp);
 
 const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
-const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestore');
+const { getFirestore, collection, getDocs, Timestamp, FieldValue } = require('firebase-admin/firestore');
 
 initializeApp();
-const db = getFirestore();
+export const db = getFirestore(fireapp);
